@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style-cask.css" rel="stylesheet" type="text/css">
+    <title>Welcome</title>
+    
+</head>
+<body>
+    <div class="checker-text"> 
+        <div class="age-checker-title">Hai piu' di 18 anni?</div>
+        <div id="over" class="age-checker-option si"> 
+            <a href='index-cask.html'>SI</a>
+        </div>
+        <div id="under" class="age-checker-option no">NO</div>
+    </div>
+
+    <div class='coasters'><img src="./img/coasters.png" class="coasters-img" alt="coasters-logo" ></div>
+    <div class="age-checker-top"></div>
+    <div class="age-checker-bottom"></div>
+
+    <script>
+        let over = document.getElementById('over');
+        let under = document.getElementById('under');
+
+        over.addEventListener('click', function(){
+            localStorage.setItem('acceptance', "true");
+        })
+
+        under.addEventListener('click', function(){
+            alert("Devi avere piu' di 18 anni per accedere")
+            window.location.href='https://www.google.com'
+        });
+
+    </script>
+    
+</body>
+</html>
